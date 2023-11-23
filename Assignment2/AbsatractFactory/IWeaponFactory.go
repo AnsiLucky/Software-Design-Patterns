@@ -13,9 +13,7 @@ type IWeaponFactory interface {
 func GetWeaponFactory(team string) (IWeaponFactory, error) {
 	if team == "terrorist" {
 		return &Terrorist{}, nil
-	}
-
-	if team == "counter-terrorist" {
+	} else if team == "counter-terrorist" {
 		return &CounterTerrorist{}, nil
 	}
 
